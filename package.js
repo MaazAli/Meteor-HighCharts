@@ -1,6 +1,6 @@
 Package.describe({
   summary: "HighCharts for Meteor, with an easy to use helper to get you started!",
-  version: "0.2.1",
+  version: "0.2.2",
   git: "https://github.com/MaazAli/Meteor-HighCharts.git"
 });
 
