@@ -1,4 +1,6 @@
 Template.highchartsHelper.rendered = function() {
-	var chartObject = this.data.chartObject;
-	$('#' + this.data.chartId).highcharts(chartObject);
+	var self = this;
+	var chartObject = self.data.chartObject;
+	console.log(chartObject);
+	$('#' + self.data.chartId).highcharts(chartObject);
 };
