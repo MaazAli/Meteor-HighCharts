@@ -1,24 +1,21 @@
 Package.describe({
-  summary: "HighCharts for Meteor, with an easy to use helper to get you started!",
-  version: "0.2.2",
-  git: "https://github.com/MaazAli/Meteor-HighCharts.git"
+    summary: "HighCharts for Meteor, with an easy to use helper to get you started!",
+    version: "0.2.3",
+    git: "https://github.com/MaazAli/Meteor-HighCharts.git"
 });
 
-Package.onUse(function(api) {
-  
-  api.versionsFrom('METEOR@0.9.1.1');
-  api.use('jquery');
-  api.use('templating');
-  
-  // highcharts include 
-  api.addFiles('highcharts.js', 'client');
+Package.onUse(function (api) {
 
-  api.addFiles('highchartsHelper.html', 'client');
-  api.addFiles('highchartsHelper.js', 'client');
+    api.versionsFrom('METEOR@0.9.1.1');
+    api.use('jquery');
+    api.use('templating');
+
+    // basic highcharts 
+    api.addFiles('lib/highcharts.js', 'client');
+    // extra types
+    api.addFiles('lib/highcharts-more.js', 'client');
+    api.addFiles('lib/highcharts-solide-gauge.js', 'client');
+
+    api.addFiles('lib/highchartsHelper.html', 'client');
+    api.addFiles('lib/highchartsHelper.js', 'client');
 });
-
-// Package.onTest(function(api) {
-//   api.use('tinytest');
-//   api.use('maazalik:highcharts');
-//   api.addFiles('maazalik:highcharts-tests.js');
-// });
