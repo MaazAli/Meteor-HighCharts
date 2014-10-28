@@ -62,6 +62,10 @@ Template.myTemplate.topGenresChart = function() {
 
 
 ```
+
+## Examples
+A set of running examples can be found [here](http://highcharts-demo.meteor.com/) and the source can be found [here](https://github.com/jhuenges/highcharts-demo).
+
 ## License (Highcharts)
 
 Highcharts is free for personal and non-profit projects. For other purposes click [here](http://shop.highsoft.com/highcharts.html).
