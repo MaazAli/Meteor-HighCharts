@@ -10,11 +10,12 @@ Package.onUse(function (api) {
     api.use('jquery');
     api.use('templating');
 
-    // basic highcharts 
+    // basic highcharts
     api.addFiles('lib/highcharts.js', 'client');
     // extra types
     api.addFiles('lib/highcharts-more.js', 'client');
     api.addFiles('lib/highcharts-solide-gauge.js', 'client');
+    api.addFiles('lib/highcharts-heatmap.js', 'client');
 
     api.addFiles('lib/highchartsHelper.html', 'client');
     api.addFiles('lib/highchartsHelper.js', 'client');
