@@ -14,7 +14,7 @@ Package.onUse(function (api) {
     api.addFiles('lib/highcharts.js', 'client');
     // extra types
     api.addFiles('lib/highcharts-more.js', 'client');
-    api.addFiles('lib/highcharts-solide-gauge.js', 'client');
+    api.addFiles('lib/highcharts-solid-gauge.js', 'client');
     api.addFiles('lib/highcharts-heatmap.js', 'client');
 
     api.addFiles('lib/highchartsHelper.html', 'client');
