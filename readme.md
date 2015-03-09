@@ -11,11 +11,11 @@ meteor add maazalik:highcharts
 The plugin comes with a helper that can be used to quickly generate charts
 
 ```
-// myTempmlate.html
+// myTemplate.html
 {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
 ```
 
-The `chartObject` basically takes the object that you would normall define using highCharts, example below:
+The `chartObject` basically takes the object that you would normally define using highCharts, example below:
 
 ```
 // myTemplate.js
@@ -62,6 +62,11 @@ Template.myTemplate.topGenresChart = function() {
 
 
 ```
+
+## Supported Chart Types
+This wrapper supports all of the core chart types in addition to:
+- [Solid Gauge](http://www.highcharts.com/docs/chart-and-series-types/angular-gauges)
+- [Heatmaps](http://www.highcharts.com/docs/chart-and-series-types/heatmap)
 
 ## Examples
 A set of running examples can be found [here](http://highcharts-demo.meteor.com/) and the source can be found [here](https://github.com/jhuenges/highcharts-demo).
