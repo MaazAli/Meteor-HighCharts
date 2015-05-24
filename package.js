@@ -18,6 +18,8 @@ Package.onUse(function (api) {
       'lib/highcharts-more.js',
       // Helper
       'lib/highchartsHelper.html',
-      'lib/highchartsHelper.js'
+      'lib/highchartsHelper.js',
+      // Compatibility notice
+      'lib/highcharts-compatibility.js'
     ], 'client');
 });
