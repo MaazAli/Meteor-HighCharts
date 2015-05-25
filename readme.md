@@ -63,6 +63,11 @@ Template.myTemplate.topGenresChart = function() {
 
 ```
 
+## More charts
+- [Solid Gauges](https://github.com/MaazAli/highcharts-gauge)
+- [3D Charts](https://github.com/MaazAli/highcharts-3d)
+- more to come ...
+
 ## Examples
 A set of running examples can be found [here](http://highcharts-demo.meteor.com/) and the source can be found [here](https://github.com/jhuenges/highcharts-demo).
 
