@@ -14,6 +14,7 @@ Package.onUse(function (api) {
     api.addFiles([
       // Core
       'lib/highcharts.js',
+      'lib/no-data-to-display.js',
       // Extra types
       'lib/highcharts-more.js',
       // Helper
