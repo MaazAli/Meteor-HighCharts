@@ -21,6 +21,8 @@ Package.onUse(function (api) {
       'lib/highchartsHelper.html',
       'lib/highchartsHelper.js',
       // Compatibility notice
-      'lib/highcharts-compatibility.js'
+      'lib/highcharts-compatibility.js',
+      // Modules
+      'lib/drilldown.js'
     ], 'client');
 });
