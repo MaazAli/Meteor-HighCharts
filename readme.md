@@ -66,6 +66,7 @@ Template.myTemplate.topGenresChart = function() {
 ## More charts
 - [Solid Gauges](https://github.com/MaazAli/highcharts-gauge)
 - [3D Charts](https://github.com/MaazAli/highcharts-3d)
+- [Drilldowns](https://github.com/ClarenceL/meteor-highcharts-drilldown)
 - more to come ...
 
 ## Examples
