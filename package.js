@@ -20,7 +20,5 @@ Package.onUse(function (api) {
       // Helper
       'lib/highchartsHelper.html',
       'lib/highchartsHelper.js',
-      // Compatibility notice
-      'lib/highcharts-compatibility.js'
     ], 'client');
 });
