@@ -15,6 +15,8 @@ Package.onUse(function (api) {
       // Core
       'lib/highcharts.js',
       'lib/no-data-to-display.js',
+      'lib/modules/maps.js',
+      'lib/modules/map-custom-world.js',
       // Extra types
       'lib/highcharts-more.js',
       // Helper
