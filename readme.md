@@ -79,8 +79,7 @@ The `chartObject` basically takes the object that you would normall define using
 Template.myTemplate.mapConfig = function() {
 	var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
 	$.each(mapData, function () {
-		this.id = this.properties['hc-key']; // for Chart.get()
-		this.flag = this.id.replace('UK', 'GB').toLowerCase();
+		this.id = this.properties['hc-key'];
 	});
 
 	return {
@@ -99,14 +98,23 @@ Template.myTemplate.mapConfig = function() {
       startOnTick: false,
       min: 50000
     },
-    tooltip: {
-      footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
-    },
     series : [{
-      data : [],
+      data : [{
+      	code3: 'BR',
+        name: 'Brazil',
+        value: 2500000
+      }, {
+      	code3: 'ES',
+        name: 'Spain',
+        value: 10000
+      }, {
+      	code3: 'US',
+        name: 'United States',
+        value: 300000
+      }],
       mapData: mapData,
-      joinBy: ['iso-a3', 'code3'],
-      name: 'Current population',
+      joinBy: ['iso-a2', 'code3'],
+      name: 'Some text here',
       allowPointSelect: true,
       cursor: 'pointer',
       states: {
