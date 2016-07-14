@@ -1,4 +1,4 @@
-## Meteor Wrapper for HighCharts with a helper
+## Meteor Wrapper for HighCharts, HighMaps with a helper
 
 Add to your Meteor app
 
@@ -6,7 +6,7 @@ Add to your Meteor app
 meteor add maazalik:highcharts
 ```
 
-## Instructions
+## Instructions for HighCharts
 
 The plugin comes with a helper that can be used to quickly generate charts
 
@@ -57,6 +57,66 @@ Template.myTemplate.topGenresChart = function() {
 				['Yuri',     6.2]
 			]
 		}]
+	};
+};
+
+
+```
+
+## Instructions for HighMaps
+
+The plugin comes with a helper that can be used to quickly generate charts
+
+```
+// myTempmlate.html
+{{> highmapsHelper chartId="test-map" chartWidth="100%" charHeight="100%" chartObject=mapConfig}}
+```
+
+The `chartObject` basically takes the object that you would normall define using HighMaps, example below:
+
+```
+// myTemplate.js
+Template.myTemplate.mapConfig = function() {
+	var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+	$.each(mapData, function () {
+		this.id = this.properties['hc-key']; // for Chart.get()
+		this.flag = this.id.replace('UK', 'GB').toLowerCase();
+	});
+
+	return {
+  	title : {
+      text : 'My highmap'
+    },
+    mapNavigation: {
+      enabled: true,
+      buttonOptions: {
+        verticalAlign: 'bottom'
+      }
+    },
+    colorAxis: {
+      type: 'logarithmic',
+      endOnTick: false,
+      startOnTick: false,
+      min: 50000
+    },
+    tooltip: {
+      footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
+    },
+    series : [{
+      data : [],
+      mapData: mapData,
+      joinBy: ['iso-a3', 'code3'],
+      name: 'Current population',
+      allowPointSelect: true,
+      cursor: 'pointer',
+      states: {
+        select: {
+          color: '#a4edba',
+          borderColor: 'black',
+          dashStyle: 'shortdot'
+        }
+      }
+    }]
 	};
 };
 
