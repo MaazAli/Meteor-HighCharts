@@ -15,7 +15,7 @@ The plugin comes with a helper that can be used to quickly generate charts
 {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
 ```
 
-The `chartObject` basically takes the object that you would normall define using highCharts, example below:
+The `chartObject` basically takes the object that you would normally define using highCharts, example below:
 
 ```
 // myTemplate.js
@@ -72,7 +72,7 @@ The plugin comes with a helper that can be used to quickly generate charts
 {{> highmapsHelper chartId="test-map" chartWidth="100%" charHeight="100%" chartObject=mapConfig}}
 ```
 
-The `chartObject` basically takes the object that you would normall define using HighMaps, example below:
+The `chartObject` basically takes the object that you would normally define using HighMaps, example below:
 
 ```
 // myTemplate.js
