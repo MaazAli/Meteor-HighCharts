@@ -1,6 +1,6 @@
 Package.describe({
     summary: "HighCharts for Meteor, with an easy to use helper to get you started!",
-    version: "0.4.0",
+    version: "0.5.0",
     git: "https://github.com/MaazAli/Meteor-HighCharts.git",
     name: "maazalik:highcharts"
 });
@@ -15,6 +15,8 @@ Package.onUse(function (api) {
       // Core
       'lib/highcharts.js',
       'lib/no-data-to-display.js',
+      'lib/modules/maps.js',
+      'lib/modules/map-custom-world.js',
       // Extra types
       'lib/highcharts-more.js',
       // Helper

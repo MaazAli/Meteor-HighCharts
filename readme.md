@@ -1,4 +1,4 @@
-## Meteor Wrapper for HighCharts with a helper
+## Meteor Wrapper for HighCharts, HighMaps with a helper
 
 Add to your Meteor app
 
@@ -6,7 +6,7 @@ Add to your Meteor app
 meteor add maazalik:highcharts
 ```
 
-## Instructions
+## Instructions for HighCharts
 
 The plugin comes with a helper that can be used to quickly generate charts
 
@@ -15,7 +15,7 @@ The plugin comes with a helper that can be used to quickly generate charts
 {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
 ```
 
-The `chartObject` basically takes the object that you would normall define using highCharts, example below:
+The `chartObject` basically takes the object that you would normally define using highCharts, example below:
 
 ```
 // myTemplate.js
@@ -57,6 +57,74 @@ Template.myTemplate.topGenresChart = function() {
 				['Yuri',     6.2]
 			]
 		}]
+	};
+};
+
+
+```
+
+## Instructions for HighMaps
+
+The plugin comes with a helper that can be used to quickly generate charts
+
+```
+// myTempmlate.html
+{{> highmapsHelper chartId="test-map" chartWidth="100%" charHeight="100%" chartObject=mapConfig}}
+```
+
+The `chartObject` basically takes the object that you would normally define using HighMaps, example below:
+
+```
+// myTemplate.js
+Template.myTemplate.mapConfig = function() {
+	var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+	$.each(mapData, function () {
+		this.id = this.properties['hc-key'];
+	});
+
+	return {
+  	title : {
+      text : 'My highmap'
+    },
+    mapNavigation: {
+      enabled: true,
+      buttonOptions: {
+        verticalAlign: 'bottom'
+      }
+    },
+    colorAxis: {
+      type: 'logarithmic',
+      endOnTick: false,
+      startOnTick: false,
+      min: 50000
+    },
+    series : [{
+      data : [{
+      	code3: 'BR',
+        name: 'Brazil',
+        value: 2500000
+      }, {
+      	code3: 'ES',
+        name: 'Spain',
+        value: 10000
+      }, {
+      	code3: 'US',
+        name: 'United States',
+        value: 300000
+      }],
+      mapData: mapData,
+      joinBy: ['iso-a2', 'code3'],
+      name: 'Some text here',
+      allowPointSelect: true,
+      cursor: 'pointer',
+      states: {
+        select: {
+          color: '#a4edba',
+          borderColor: 'black',
+          dashStyle: 'shortdot'
+        }
+      }
+    }]
 	};
 };
 
