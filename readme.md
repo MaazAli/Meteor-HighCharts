@@ -12,7 +12,7 @@ The plugin comes with a helper that can be used to quickly generate charts
 
 ```
 // myTempmlate.html
-{{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
+{{> highchartsHelper chartId="test" chartWidth="100%" chartHeight="100%" chartObject=topGenresChart}}
 ```
 
 The `chartObject` basically takes the object that you would normally define using highCharts, example below:
